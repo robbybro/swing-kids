@@ -3,13 +3,27 @@
 <head>
 	<title>UW Swing Kids</title>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/swing-kids.css">
 </head>
 <body>
 
+	<div id="dance-of-the-day-widget">
+		<img src="img/swing-kids-logo.png">
+		<div id="calendar-data"></div>
+	</div>
+
+	<div class="templates">
+		<div class="event-item-template">
+			<span class="event-time">Time: </span>
+			<span class="event-location">Place: </span>
+			<span class="event-summary"><!--summary is the same as title in google's api.--></span>
+			<span class="event-description"></span>
+		</div>
+	</div>
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/swing-kids.js"></script>
 </body>
 </html>

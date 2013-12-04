@@ -1,1 +1,26 @@
 /*Swing Kids CSS File*/
+
+
+
+/*dance of the day start*/
+#dance-of-the-day-widget {
+	background-color: #F5F5F5;
+	overflow: hidden;
+}
+#dance-of-the-day-widget img {
+	width: 5%;
+	float: left;
+}
+
+.templates {
+	display: none;
+}
+
+.event-item-template span {
+	margin: 10px;
+}
+
+.event-item-template .event-summary {
+	font-weight: 800;
+}
+/*danace of the day end*/
