@@ -16,16 +16,14 @@ function danceOfTheDay() {
 
 	// set date parameters: today at 12 am until tomorrow at 12 am
 	var startDate = new Date();
-	// set time to midnight on the morning of the day the page is accessed
+	// set time to midnight of this morning (this morning being whichever day the page was accessed)
 	startDate.setHours(0);
 	startDate.setMinutes(0);
 	startDate.setSeconds(0);
 	startDate.setMilliseconds(0);
-
-	console.log('start date: ' + startDate);
+	// end date is exactly 24 hours after start date
 	var endDate = new Date(startDate.getTime() + (24 * 60 * 60 * 1000));
-	console.log('end date: ' + endDate);
-	// convert date parameters to the format that google takes
+	// convert date parameters to the format that google takes 
 	startDate = startDate.toISOString();
 	endDate = endDate.toISOString();
 	calendarUrl += ("?timeMin=" + startDate + "&timeMax=" + endDate);
@@ -35,51 +33,57 @@ function danceOfTheDay() {
 	$.get(calendarUrl, function(data, status) {
 		renderDanceOfTheDay(data);
 		console.log('querying Google Calendar API was ' + status);
+		console.log('url queried: ' + calendarUrl);
 	});
-
-
-	// console.log(calendarUrl);
 }
 
-// renders dance of the day on the page.
+// Renders dance of the day in the widget
+// Requirements: there must be at least one event, all events must have names and times
+// Optional: 	 Description, Place
 function renderDanceOfTheDay(data) {
 	var calendarData = $('#calendar-data');
 	//	console.log('data' + data.items[0].description);
 	if(data.items.length == 0) { // check to make sure there are events today
 		calendarData.html('No events today');
 	} else {
+		var numEvents = 0; // keep track of how many events were loaded
 		var eventItemTemplate = $('.event-item-template');
 		$.each(data.items, function(){
-			var eventItem = eventItemTemplate.clone();
-			// craft time stamp
-			var startHours = new Date(this.start.dateTime).getHours();
-			var startMinutes = new Date(this.start.dateTime).getMinutes();
-			var endHours = new Date(this.end.dateTime).getHours();
-			var endMinutes = new Date(this.end.dateTime).getMinutes();
-			var start = (startHours % 12) + ":" + startMinutes;
-			var end = (endHours % 12) + ":" + endMinutes;
+			if(this.summary != undefined) { // no title
+				numEvents++;
+				var eventItem = eventItemTemplate.clone();
+				// craft time stamp
+				var startHours = new Date(this.start.dateTime).getHours();
+				var startMinutes = new Date(this.start.dateTime).getMinutes();
+				var endHours = new Date(this.end.dateTime).getHours();
+				var endMinutes = new Date(this.end.dateTime).getMinutes();
+				// figure out am or pm and convert pm's down (Google uses 24 hour system instead of 12)
+				var start = (startHours % 12) + ":" + startMinutes;
+				var end = (endHours % 12) + ":" + endMinutes;
+				if(startHours / 12 < 1) {
+					start += " am";
+				} else {
+					start += " pm";
+				}
+				if(endHours / 12 < 1) {
+					end += " am";
+				} else {
+					end += " pm"; 
+				}
 
-			if(startHours / 12 < 1) {
-				start += " am";
-			} else {
-				// pm
-				start += " pm";
+				console.log("Event #" +  numEvents + " - start time: " + start + ", end time: " + end + ", title: " + this.summary + ", location: " + this.location + ", description: " + this.description);
+
+				eventItem.find('.event-summary').html(this.summary); // summary = title of event in google speak
+				eventItem.find('.event-time').append("When: " + start + "-" + end);
+				// location and description optional
+				if(this.location != undefined) {
+					eventItem.find('.event-location').append("Where: " + this.location)
+				}
+				if(this.description != undefined) {
+					eventItem.find('.event-description').append("Description: " + this.description);
+				}
+				calendarData.append(eventItem);
 			}
-
-			if(endHours / 12 < 1) {
-				// am
-				end += " am";
-			} else {
-				// pm
-				end += " pm";
-			}
-			console.log("start: " + start + ", end: " + end);
-
-			eventItem.find('.event-time').append(start + "-" + end);
-			eventItem.find('.event-location').append(this.location)
-			eventItem.find('.event-summary').html(this.summary);
-			eventItem.find('.event-description').append(this.description);
-			calendarData.append(eventItem);
 		}); // .each
 	}
 }
