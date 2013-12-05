@@ -27,7 +27,9 @@
 
 /*people start*/
 .officer h4,
-.officer h3 {
+.officer h3,
+.instructor h3,
+.insturctor h4 {
     text-align: center;
 }
 /*people end*/
