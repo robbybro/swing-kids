@@ -1,29 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>UW Swing Kids</title>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/swing-kids.css">
-</head>
-<body>
+  <head>
+    <title>UW Swing Kids</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/swing-kids.css">
+  </head>
+  <body>
 
-	<div id="dance-of-the-day-widget">
-		<img src="img/swing-kids-logo.png">
-		<div id="calendar-data"></div>
-	</div>
+    <div id="dance-of-the-day-widget">
+      <img src="img/swing-kids-logo.png">
+      <div id="calendar-data"></div>
+    </div>
 
-	<div class="templates">
-		<div class="event-item-template">
-			<span class="event-summary"><!--summary is the same as title in google's api.--></span>
-			<span class="event-time"></span>
-			<span class="event-location"></span>
-			<span class="event-description"></span>
-		</div>
-	</div>
-	<!-- Latest compiled and minified JavaScript -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/swing-kids.js"></script>
-</body>
+    <div class="templates">
+      <div class="event-item-template">
+	<span class="event-summary"><!--summary is the same as title in google's api.--></span>
+	<span class="event-time"></span>
+	<span class="event-location"></span>
+	<span class="event-description"></span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2">
+        <div id="group-image-carousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#group-image-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#group-image-carousel" data-slide-to="1"></li>
+            <li data-target="#group-image-carousel" data-slide-to="2"></li>
+            <li data-target="#group-image-carousel" data-slide-to="3"></li>
+            <li data-target="#group-image-carousel" data-slide-to="4"></li>
+            <li data-target="#group-image-carousel" data-slide-to="5"></li>
+            <li data-target="#group-image-carousel" data-slide-to="6"></li>
+            <li data-target="#group-image-carousel" data-slide-to="7"></li>
+            <li data-target="#group-image-carousel" data-slide-to="8"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="img/groupPics/group2.jpg" alt="description">
+            </div>
+            <div class="item">
+              <img src="img/groupPics/group3.jpg" alt="description">
+            </div>
+            <div class="item">
+              <img src="img/groupPics/group4.jpg" alt="description">
+            </div>
+            <div class="item">
+              <img src="img/groupPics/group5.jpg" alt="description">
+            </div>
+            <div class="item">
+              <img src="img/groupPics/group6.jpg" alt="description">
+            </div>
+            <div class="item">
+              <img src="img/groupPics/group7.jpg" alt="description">
+            </div>
+            <div class="item">
+              <img src="img/groupPics/group8.jpg" alt="description">
+            </div>
+            <div class="item">
+              <img src="img/groupPics/group9.jpg" alt="description">
+            </div>
+          </div> <!-- carousel-inner -->
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#group-image-carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#group-image-carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div> <!-- column -->
+    </div> <!-- container -->
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/swing-kids.js"></script>
+  </body>
 </html>
