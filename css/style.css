@@ -1,0 +1,308 @@
+/* Global */
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: #8a8683;
+	background-color:#ffffff;
+}
+img {
+	max-width: 100%;
+}
+a:link {
+	color: #666;
+	text-decoration: none;
+}
+a:hover {
+	color: #7E3F98;
+	text-decoration: none;
+}
+a:visited {
+	color: #666;
+	text-decoration: none;
+}
+
+
+
+
+
+/* Navigation */
+
+.menu {
+	position:fixed;
+	top:0px;
+	width:100%;
+	height: 80px !important; 
+	height:auto; 
+	background-color:#ffffff;
+	z-index:100;
+}
+#logo {
+	text-align: center;
+}
+#logo img{
+	height: 80px;
+
+}
+
+#nav {
+
+    color: #666666;
+    font-family: 'Open Sans Condensed',sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+    margin: 0px  !important;
+    padding:0px !important;
+    text-align: center;
+}
+.nav{
+	list-style: none;
+	margin: 0 auto  !important;
+	padding: 13px 0px !important;
+	text-align: center;
+
+}
+.nav li a{
+	color:#666;
+	text-transform: uppercase;
+	outline: none;
+	transition: all 0.4s !important;
+	-webkit-transition: all 0.4s !important; /* Safari */
+
+}
+.nav li a:hover{
+	cursor:pointer;
+	color: #7E3F98;
+	text-shadow: 0px 1px 3px #999;
+}
+
+
+.active{
+		cursor:pointer;
+		color: #7E3F98;
+		text-shadow: 0px 1px 3px #999;
+}
+
+
+
+
+/* General Slides */ 
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	height:auto;
+	position: relative;
+	padding:100px 0;
+}
+
+
+
+/* Slide 1 */ 
+
+#slide1{
+	background-image: url('../images/bg02.jpg');
+	background-position: center top !important;
+	background-size: cover;
+	background-color:#ffffff;
+}
+#slide1 #content h2{
+	font-size: 6em;
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	color:#fff;
+	/*text-shadow: 0px 0px 2px #999;*/
+	font-weight: 700;
+
+}
+.swingkids-brand{
+	width: 100%;
+	text-align: center;
+}
+.swingkids-brand img{
+	width: 70%;
+	margin: 120px auto 40px;
+}
+
+
+
+
+/* Slide 2 */ 
+
+#slide2{
+	background-image:url('../images/bg04.jpg');
+	background-size: cover;
+	color:#ffffff;
+}
+
+
+
+
+/* Slide 3 */ 
+
+#slide3{
+	background-color:#ffffff;
+}
+
+#test{
+	background-color:#bde2df;
+	color:#ffffff;
+	text-align:center;
+	font-size: 2em;
+	font-weight: 400;
+}
+
+
+
+
+/* Slide 4 */
+
+#slide4{
+	background-image:url('../images/bg05.jpg');
+	background-position: center middle ;
+	background-size: cover;
+	color:#ffffff;
+}
+
+
+
+/* Slide 5 */ 
+
+#slide5{
+	background-color: #fff;
+	background-size: cover;
+	color:#555;
+}
+
+
+/* Slide 6 */ 
+
+#slide6{
+	background-image:url('../images/bg06.jpg');
+	background-size: cover;
+	color:#ffffff;
+}
+
+
+/* Slide 7 */ 
+
+#slide7{
+	background-color: #fff;
+	background-size: cover;
+	color:#555;
+}
+
+/* Slide 8 */
+
+#slide8{
+	background-image:url('../images/bg03.jpg');
+	background-position: center middle ;
+	background-size: cover;
+	color:#ffffff;
+}
+
+
+
+.title-slide h1 {
+	color: #fff;
+    font-family: 'Open Sans Condensed',sans-serif;
+    text-transform: capitalize;
+	font-size: 3.8em;
+	letter-spacing: 0px;
+	line-height: 1em;
+	font-weight: 700;
+}
+.title-slide h2 {
+	color: #fff;
+    font-family: 'Open Sans Condensed',sans-serif;
+	font-size: 2em;
+	line-height: 2em;
+	padding:0px;
+	font-weight: 400;
+	margin-top: -10px;
+}
+
+
+.content-slide h1 {
+	color: #666;
+    font-family: 'Open Sans Condensed',sans-serif;
+	font-size: 3.8em;
+	letter-spacing: 0px;
+	text-transform: capitalize;
+	line-height: 2em;
+	font-weight: 700;
+}
+.content-slide p {
+	color: #666;
+    font-family: 'Open Sans Condensed',sans-serif;
+	font-size: 2em;
+	line-height: 2em;
+	padding:20px 0px;
+	font-weight: 400;
+}
+
+
+/****Slide-01****/
+
+
+@media (max-width: 990px) { 
+ .container{
+	padding: 0px !important;
+	margin:0px auto !important;
+}
+	#nav {
+		background-color:#fff;
+	    margin: 0px;
+	}
+	.nav{
+		background-color:#fff;
+		padding: 4px 0px !important;
+
+
+	}
+	.nav li{
+
+		padding: 0px;
+
+
+	}
+
+ }
+.container{
+
+	padding: 0px !important;
+	margin:0px auto !important;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+	background-color:#fff; 
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) { 
+	.container{
+		width: 100%;
+	}
+}
+
+@media (max-width: 600px) { 
+	#slide1{
+		background-image: url('../images/bg02.jpg');
+		background-position: center 80px !important;
+		background-size: cover;
+		background-color:#ffffff;
+	}
+	#slide1 #content h2{
+		font-size: 4em;
+	}
+	.swingkids-brand img{
+		width: 80%;
+		margin: 100px auto 20px;
+	}
+	#slide2,#slide4,#slide6,#slide8{
+		background-attachment: fixed;
+	}
+
+
+}
