@@ -306,3 +306,22 @@ a:visited {
 
 
 }
+
+/* People */
+.officer h4,
+.officer h3,
+.instructor h3,
+.insturctor h4 {
+    text-align: center;
+}
+
+.instructor p,
+.officer p {
+    font-size: 150%;
+}
+
+#instructors,
+#officers {
+    font-size: 400%;
+    margin-top: 30px;
+}
