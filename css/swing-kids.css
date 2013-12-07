@@ -23,4 +23,13 @@
 .event-item-template .event-summary {
 	font-weight: 800;
 }
-/*danace of the day end*/
+/*dance of the day end*/
+
+/*people start*/
+.officer h4,
+.officer h3,
+.instructor h3,
+.insturctor h4 {
+    text-align: center;
+}
+/*people end*/

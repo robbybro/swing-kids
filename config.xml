@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<juiceboxgallery 
+
+	cropToFit="false"
+	galleryTitle="Swing-Kids Gallery"
+	textColor="rgba(153,0,204,1)"
+	thumbFrameColor="rgba(153,0,204,.5)"
+	showOpenButton="true"
+	useThumbDots="false"
+	useFullscreenExpand="true"
+	indexPageName="gallery.html"
+
+>
+  <image imageURL="img/club-images/group/075.JPG"
+	thumbURL="thumbs/075.JPG"
+	linkURL="img/club-images/group/075.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\075.JPG">
+    <title><![CDATA[075]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/079(4).JPG"
+	thumbURL="thumbs/079(4).JPG"
+	linkURL="img/club-images/group/079(4).JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\079(4).JPG">
+    <title><![CDATA[079(4)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/083(3).JPG"
+	thumbURL="thumbs/083(3).JPG"
+	linkURL="img/club-images/group/083(3).JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\083(3).JPG">
+    <title><![CDATA[083(3)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/086(2).JPG"
+	thumbURL="thumbs/086(2).JPG"
+	linkURL="img/club-images/group/086(2).JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\086(2).JPG">
+    <title><![CDATA[086(2)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/091(2).JPG"
+	thumbURL="thumbs/091(2).JPG"
+	linkURL="img/club-images/group/091(2).JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\091(2).JPG">
+    <title><![CDATA[091(2)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/094.JPG"
+	thumbURL="thumbs/094.JPG"
+	linkURL="img/club-images/group/094.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\094.JPG">
+    <title><![CDATA[094]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/095(2).JPG"
+	thumbURL="thumbs/095(2).JPG"
+	linkURL="img/club-images/group/095(2).JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\095(2).JPG">
+    <title><![CDATA[095(2)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/096(4).JPG"
+	thumbURL="thumbs/096(4).JPG"
+	linkURL="img/club-images/group/096(4).JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\096(4).JPG">
+    <title><![CDATA[096(4)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/097(2).JPG"
+	thumbURL="thumbs/097(2).JPG"
+	linkURL="img/club-images/group/097(2).JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\097(2).JPG">
+    <title><![CDATA[097(2)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/139.JPG"
+	thumbURL="thumbs/139.JPG"
+	linkURL="img/club-images/group/139.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\139.JPG">
+    <title><![CDATA[139]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/163.JPG"
+	thumbURL="thumbs/163.JPG"
+	linkURL="img/club-images/group/163.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\163.JPG">
+    <title><![CDATA[163]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/167(2).JPG"
+	thumbURL="thumbs/167(2).JPG"
+	linkURL="img/club-images/group/167(2).JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\167(2).JPG">
+    <title><![CDATA[167(2)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/167.JPG"
+	thumbURL="thumbs/167.JPG"
+	linkURL="img/club-images/group/167.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\167.JPG">
+    <title><![CDATA[167]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/175.JPG"
+	thumbURL="thumbs/175.JPG"
+	linkURL="img/club-images/group/175.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\175.JPG">
+    <title><![CDATA[175]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/194(2).JPG"
+	thumbURL="thumbs/194(2).JPG"
+	linkURL="img/club-images/group/194(2).JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\194(2).JPG">
+    <title><![CDATA[194(2)]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/196.JPG"
+	thumbURL="thumbs/196.JPG"
+	linkURL="img/club-images/group/196.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\196.JPG">
+    <title><![CDATA[196]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/206.JPG"
+	thumbURL="thumbs/206.JPG"
+	linkURL="img/club-images/group/206.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\206.JPG">
+    <title><![CDATA[206]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/209.JPG"
+	thumbURL="thumbs/209.JPG"
+	linkURL="img/club-images/group/209.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\209.JPG">
+    <title><![CDATA[209]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+  <image imageURL="img/club-images/group/247.JPG"
+	thumbURL="thumbs/247.JPG"
+	linkURL="img/club-images/group/247.JPG"
+	linkTarget="_blank"
+	sourcePath="C:\Users\Xavie_000\Documents\swing-kids\img\club-img/club-images/group\group\247.JPG">
+    <title><![CDATA[247]]></title>
+    <caption><![CDATA[]]></caption>
+  </image>
+</juiceboxgallery>
