@@ -289,8 +289,7 @@
 	        <div class="container clearfix">
 
 		        <div id="content" class="col-xs-12 title-slide">
-			        <h1>Look at our photos</h1>
-			        <h2>This area is the beginning of a new page or slide</h2>
+			        <h1>Photos</h1>
 		        </div>
 
 	        </div>
@@ -301,13 +300,23 @@
 	        <div class="container clearfix">
 
 		        <div id="content" class="col-xs-12 content-slide">
-			        <h1>Photo Contents Here</h1>
-			        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div id="gallery">
+			        <h1>Explore our interactive Photo Gallery</h1>
+			        <p>Get a feel for our atmosphere!</p>
+                    <!--START JUICEBOX EMBED-->
+                    <script src="jbcore/juicebox.js"></script>
+                    <script>
+                        new juicebox({
+                            containerId : "juicebox-container",
+                            galleryWidth: "100%",
+                            galleryHeight: "75%",
+                            backgroundColor: "#222222"
+                        });
+                    </script>
+    
+                    <div id="juicebox-container"></div>
+                    </div>
+                <!--END JUICEBOX EMBED-->
 		        </div>
 
 	        </div>
