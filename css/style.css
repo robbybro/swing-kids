@@ -1,6 +1,5 @@
 /* Global */
-@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700);
-@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
@@ -8,6 +7,20 @@ body {
 	color: #8a8683;
 	background-color:#ffffff;
 }
+
+p {
+	font-size: 120%;
+}
+
+h1, h2, h3, h4 {
+	color: black;
+	text-align: center;
+}
+
+h1 {
+	text-transform: capitalize;
+}
+
 img {
 	max-width: 100%;
 }
@@ -15,420 +28,137 @@ img {
 
 /* Navigation */
 
-.menu {
-	position:fixed;
-	top:0px;
-	width:100%;
-	/*height: 40px !important; */
-	height:auto; 
-	line-height: 1;
-	background-color: rgba(255, 255, 255, .7);
-	z-index:100;
+header {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -o-transition: .4s;
+    transition:  .4s;
+    z-index: 9001; /*Over 9000!*/
 }
 
-
-#logo {
-	height: 80px;
+.collapse.navbar-collapse.navbar-ex1-collapse {
+	background-color: rgba(255, 255, 255, .5);
 }
 
-#nav {
-    font-family: 'Amatic',sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    margin: 0px  !important;
-    padding:0px !important;
-    text-align: center;
-    display: inline-block; 
-}
-.nav{
-	list-style: none;
-	margin: 0 auto  !important;
-	padding: 0px !important;
-	text-align: center;
-
-}
-.nav li{
-	display: inline-block;
-/*	transition: all 0.4s !important;
-	-webkit-transition: all 0.4s !important; /* Safari */*/
-}
-.nav li a{
-	color:#61257f;
-	text-transform: uppercase;
-	outline: none;
-	transition: all 0.4s !important;
-	-webkit-transition: all 0.4s !important; /* Safari */
-
+.navbar-brand {
+	padding: 2px;
+	background-color: #7e3f98; /*logo color*/
 }
 
-.nav li a:hover {
-	color:white;
-	text-shadow: 2px 2px #61257f;
+.navbar-brand:hover {
+	background-color: white;
 }
 
-/*.nav li:hover {
-	background-color: #61257f;
-}*/
-
-.active{
-	cursor:pointer;
-	color: #FFF !important;
-	background: #61257f;
-	top:0 !important;
-}
-.active a{
-	color: #FFF !important;
+.navbar, .navbar-default {
+	border-radius: 0;
+	border: none;
 }
 
+header a {
+	font-size: 16px;
+	font-weight: 800;
+	color: inherit;
+}
+
+header img {
+	height: 50px;
+}
+
+.navbar-nav {
+	float: right;
+	margin: 0;
+}
+
+.navbar-nav li a, .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-nav li a:hover {
+	transition: .5s;
+	-webkit-transition: .5s; /* Safari */
+}
+
+.navbar-nav li a {
+	line-height: 24px;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a>img {
+	margin-right: 10px;
+}
+
+/*Active navbar*/
+.navbar-default .navbar-nav>.active>a, .navbar .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar .navbar-nav>.active>a:hover, .navbar-nav>li>a:hover{
+	background-color: #7e3f98; /*logo color*/
+	color: white;
+}
+
+/* End Navigation*/
 
 /* General Slides */ 
-
-.slide{
+.parallax-background {
+	background-image: url('../images/bg03.jpg');
 	background-attachment: fixed;
-	width:100%;
-	height:auto;
-	position: relative;
-	padding:100px 0;
+	padding: 20px;
+	color: white;
 }
 
+.parallax-background h1 {
+	color: white;
+}
 
+.section-content {
+	background-color: white;
+	width: 60%;
+	margin-left: 20%;
+	padding: 20px;
+}
 
-/* Slide 1 */ 
+/*END general slides*/
 
-#slide1{
+/* Home */ 
+
+#home{
 	background-image: url('../images/bg02.jpg');
+	padding:100px 0;
 	background-position: center top !important;
 	background-size: cover;
-	background-color:#ffffff;
+	background-attachment: fixed;
+	background-color: white;
 }
-#slide1 #content h2{
-	font-size: 6em;
-	text-align: center;
-	font-family: 'Amatic SC', cursive;
-	color:#fff;
-	/*text-shadow: 0px 0px 2px #999;*/
-	font-weight: 700;
 
-}
 .swingkids-brand{
 	width: 100%;
 	text-align: center;
 }
+
 .swingkids-brand img{
 	width: 50%;
 	margin: 120px auto 40px;
 }
 
+/* END Home */
 
 
+/* Dance of the Day */
 
-/* Slide 2 */ 
-
-#slide2{
-	background-image:url('../images/bg04.jpg');
-	background-size: cover;
-	color:#ffffff;
+.parallax-background .section-content {
+	overflow: hidden;
 }
 
-
-
-
-/* Slide 3 */ 
-
-#slide3{
-	background-color:#ffffff;
-}
-
-#test{
-	background-color:#bde2df;
-	color:#ffffff;
-	text-align:center;
-	font-size: 2em;
-	font-weight: 400;
-}
-
-
-
-
-/* Slide 4 */
-
-#slide4{
-	background-image:url('../images/bg05.jpg');
-	background-position: center middle ;
-	background-size: cover;
-	color:#ffffff;
-}
-
-
-
-/* Slide 5 */ 
-
-#slide5{
-	background-color: #fff;
-	background-size: cover;
-	color:#555;
-}
-
-
-/* Slide 6 */ 
-
-#slide6{
-	background-image:url('../images/bg06.jpg');
-	background-position: center -100px !important;
-	background-size: cover;
-	color:#ffffff;
-}
-
-
-/* Slide 7 */ 
-
-#slide7{
-	background-color: #fff;
-	background-size: cover;
-	color:#555;
-}
-
-/* Slide 8 */
-
-#slide8{
-	background-image:url('../images/bg03.jpg');
-	background-position: center middle ;
-	background-size: cover;
-	color:#ffffff;
-}
-
-
-
-.title-slide h1 {
-	color: #fff;
-    font-family: 'Open Sans Condensed',sans-serif;
-    text-transform: capitalize;
-	font-size: 3.8em;
-	letter-spacing: 0px;
-	line-height: 1em;
-	font-weight: 700;
-	text-align: center;
-}
-.title-slide h2 {
-	color: #fff;
-    font-family: 'Open Sans Condensed',sans-serif;
-	font-size: 2em;
-	line-height: 2em;
-	padding:0px;
-	font-weight: 400;
-	margin-top: -10px;
-	text-align: center;
-}
-
-
-.content-slide h1 {
-	color: #666;
-    font-family: 'Open Sans Condensed',sans-serif;
-	font-size: 3.8em;
-	letter-spacing: 0px;
-	text-transform: capitalize;
-	line-height: 2em;
-	font-weight: 700;
-	text-align: center;
-}
-.content-slide p {
-	color: #666;
-    font-family: 'Open Sans Condensed',sans-serif;
-	font-size: 2em;
-	line-height: 2em;
-	padding:20px 0px;
-	font-weight: 400;
-	text-align: center;
-}
-.content-slide h3 {
-	color: #666;
-    font-family: 'Open Sans Condensed',sans-serif;
-	text-align: center;
-	position: relative;
-	top:-20px;
-}
-.thumbnail-img{
-	margin-top: 60px;
-	width: 100%;
-}
-.thumbnail-img img{
-	width: 100%;
-}
-.caption h3,h4{
-	position: relative;
-	top: 5px;
-	font-family: 'Open Sans Condensed',sans-serif;
-	text-align: center;
-}
-#slide3,#slide5,#slide7{
-	padding: 40px 0px 80px 0px !important;
-}
-
-
-/****OPACITY****/
-.page .content-slide{
-	opacity: 0;
-	position: relative;
-}
-.page .title-slide{
-	opacity: 0;
-	position: relative;
-}
-
-@media (max-width: 990px) { 
- .container{
-	padding: 0px !important;
-	margin:0px auto !important;
-	}
-	/*#nav {
-		background-color:#fff;
-	    margin: 0px;
-	}
-	.nav{
-		background-color:#fff;
-		padding: 4px 0px !important;
-
-
-	}
-	.nav li{
-
-		padding: 0px;
-
-
-	}
-	.menu {
-		height: 80px !important;
-	}*/
-
- }
-.container{
-
-	padding: 0px !important;
-	margin:0px auto !important;
-}
-.nav>li>a:hover, .nav>li>a:focus {
-	background-color: transparent  !important; 
-}
-
-
-
-@media (min-width: 768px) and (max-width: 992px) { 
-	.container{
-		width: 100%;
-	}
-}
-
-@media (max-width: 600px) {
-
-	#slide1{
-		background-image: url('../images/bg02.jpg');
-		background-position: center 110px !important;
-		background-size: 180%;
-		background-color:#ffffff;
-	}
-
-	#slide1 #content h2{
-		font-size: 4em;
-	}
-	.swingkids-brand img{
-		width: 80%;
-		margin: 100px auto 20px;
-	}
-	#slide2,#slide4,#slide6,#slide8{
-		/* IE10 Consumer Preview */ 
-	background-image: -ms-radial-gradient(left center, circle farthest-corner, #622882 0%, #280731 100%) !important;
-
-	/* Mozilla Firefox */ 
-	background-image: -moz-radial-gradient(left center, circle farthest-corner, #622882 0%, #280731 100%) !important;
-
-	/* Opera */ 
-	background-image: -o-radial-gradient(left center, circle farthest-corner, #622882 0%, #280731 100%) !important;
-
-	/* Webkit (Safari/Chrome 10) */ 
-	background-image: -webkit-gradient(radial, left center, 0, left center, 983, color-stop(0, #622882), color-stop(1, #280731)) !important;
-
-	/* Webkit (Chrome 11+) */ 
-	background-image: -webkit-radial-gradient(left center, circle farthest-corner, #622882 0%, #280731 100%) !important
-
-	/* W3C Markup, IE10 Release Preview */ 
-	background-image: radial-gradient(circle farthest-corner at left center, #622882 0%, #280731 100%) !important;
-	}
-	.nav li a:hover{
-		font-weight: normal;
-	}
-	.active{
-		font-weight: normal;
-		background-color: transparent;
-	}
-	.active a{
-		color:#280731 !important;
-	}
-	#slide3,#slide5,#slide7{
-		padding: 10px 0px;
-	}
-	.title-slide h1 {
-		font-size: 3em;
-		letter-spacing: 0px;
-		line-height: 1em;
-		font-weight: 700;
-	}
-	.title-slide h2 {
-		font-size: 2em;
-		line-height: 2em;
-		padding:0px;
-		font-weight: 400;
-		margin-top: -10px;
-	}
-
-
-	.content-slide h1 {
-
-		font-size: 2em;
-		letter-spacing: 0px;
-		line-height: 2em;
-		font-weight: 700;
-	}
-	.content-slide p{
-		padding: 0;
-	}
-
-
-	/*navigation resize attempt*/
-	#logo {
-		float:none;
-		margin: 0 auto;
-		display: block;
-	}
-
-	#nav li {
-		font-size: 15px;
-		margin-left: 2px;
-		margin: 0 auto;
-	}
-
-	#nav {
-		margin: 0 auto;
-	}
+#dance-of-the-day .section-content{
+	background-color: rgba(255,255,255,.7);	
 }
 
 .templates {
 	display: none;
 }
 
-/*Dance of the Day*/
-#dance-of-the-day {
-	color: white;
-	background-color: rgba(255,255,255, .3);
-	width: 60%;
-	margin: 0 auto;
-}
-
-#dance-of-the-day h1 {
-	text-align: center;
-}
-
 #dance-of-the-day a {
-	color: #CCC;
+	float: right;
+	color: #464545;
+}
+
+#calendar-data {
+	color: black;
 }
 
 .event-summary {
@@ -444,35 +174,136 @@ img {
 	margin-top: 10px;
 }
 
+/* END Dance of the Day*/
+
 #mission {
+	width:60%;
+	margin-left:20%;
 	font-size: 250%;
-	color: white;
 	text-align: center;
+	color: #555;
 }
 
 iframe {
 	width: 100%;
 }
 
-/* People */
-.officer h4,
-.officer h3,
-.instructor h3,
-.insturctor h4 {
-    text-align: center;
-}
-
-.instructor p,
-.officer p {
-    font-size: 120%;
-}
-
-#instructors,
-#officers {
-    font-size: 400%;
-    margin-top: 30px;
-}
-
 #subscribe-button {
     margin-top: 40px;
+}
+
+
+/* Photos */
+.galleria-stage {
+    height: 450px;
+    position: absolute;
+    top: 10px;
+    bottom: 60px;
+    left: 10px;
+    right: 10px;
+    overflow: hidden;
+}
+
+#galleria {
+	height: 500px;
+}
+
+/*END photos*/
+
+/* PEOPLE*/
+#officers, #instructors, #members {
+	width: 100%;
+	overflow: hidden;
+	margin-top, margin-bottom: 10px;
+}
+
+#members p {
+	text-align: center;
+	font-size: 150%;
+	width: 60%;
+	margin-left: 20%;
+	margin-bottom: 50px;
+}
+
+#people {
+	overflow: hidden;
+}
+
+#people h2 {
+	color: #444;
+}
+
+.person {
+	overflow: hidden;
+	width: 92%;
+	margin: 2%;
+	padding: 10px;
+}
+
+.person img {
+	float: left;
+	width: 30%;
+}
+
+.person-row {
+	overflow: hidden;
+}
+
+.person-information {
+	float: right;
+	width: 65%;
+}
+
+.person-information h3, .person-information h4 {
+	text-align: left;
+	margin: 0;
+}
+
+.person-information p {
+	font-color: black;
+}
+
+@media(min-width: 988px) {
+	.person {
+		width: 45%;
+		float: left;
+		/*clear: both;*/
+	}
+}
+
+@media(max-width: 1000px) {
+	#mission, #members p {
+		width: 90%;
+		margin: 5%;
+		font-size: 150%;
+	}
+
+	.section-content {
+		width: 90%;
+		margin: 5%;
+	}
+}
+
+/*END PEOPLE*/
+
+/*CONTACT*/
+#contact img {
+	margin-left: 20px;
+}
+
+footer p{
+	text-align: center;
+}
+/*END CONTACT*/
+
+#lessons-and-events ul{
+	list-style-type: none;
+	width: 200px;
+	margin: 0 auto;
+}
+
+#lessons-and-events ul li a {
+	text-decoration: none;
+	font-size: 120%;
+	text-align: center;
 }
