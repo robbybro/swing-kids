@@ -59,21 +59,22 @@ function danceOfTheDay() {
 	calendarUrl += (calendarId + "events/");
 	var googleAPIKey = "AIzaSyCkbETZTX1Saim3-NW-UEOgyTqEBTXM0qY";
 
-	// set date parameters: today at 12 am until tomorrow at 12 am
-	var startDate = new Date();
+	
+	var timeMin = new Date();
 	// set time to midnight of this morning (this morning being whichever day the page was accessed)
-	startDate.setHours(0);
-	startDate.setMinutes(0);
-	startDate.setSeconds(0);
-	startDate.setMilliseconds(0);
-	// end date is exactly 24 hours after start date
-	var endDate = new Date(startDate.getTime() + (24 * 60 * 60 * 1000));
+	timeMin.setHours(0);
+	timeMin.setMinutes(0);
+	timeMin.setSeconds(0);
+	timeMin.setMilliseconds(0);
+	// end date is 23:59:59.999 after start date
+	var timeMax = new Date(timeMin.getTime() + (24 * 60 * 60 * 1000) - 1);
 	// convert date parameters to the format that google takes 
-	startDate = startDate.toISOString();
-	endDate = endDate.toISOString();
-	calendarUrl += ("?timeMin=" + startDate + "&timeMax=" + endDate);
+	timeMin = timeMin.toISOString();
+	timeMax = timeMax.toISOString();
+	calendarUrl += ("?timeMin=" + timeMin + "&timeMax=" + timeMax);
 	calendarUrl+= ("&key=" + googleAPIKey);
-
+	// console.log('Start Date: ' + timeMin);
+	// console.log('End Date: ' + timeMax);
 	// ajax request
 	$.get(calendarUrl, function(data, status) {
 		renderDanceOfTheDay(data);
@@ -94,14 +95,22 @@ function renderDanceOfTheDay(data) {
 		var numEvents = 0; // keep track of how many events were loaded
 		var eventItemTemplate = $('.event-item-template');
 		$.each(data.items, function(){
-			if(this.summary != undefined) { // no title
+			if(this.summary != undefined && isToday(this.start.dateTime)) { // no title
 				numEvents++;
 				var eventItem = eventItemTemplate.clone();
 				// craft time stamp
+				console.log(this.summary + ": " + this.start.dateTime + ", " + this.end.dateTime + ", url: " + this.htmlLink);
 				var startHours = new Date(this.start.dateTime).getHours();
 				var startMinutes = new Date(this.start.dateTime).getMinutes();
 				var endHours = new Date(this.end.dateTime).getHours();
 				var endMinutes = new Date(this.end.dateTime).getMinutes();
+				// display 7:00 instead of 7:0
+				if(endMinutes < 10) {
+					endMinutes = "0" + endMinutes;
+				}
+				if(startMinutes < 10) {
+					startMinutes = "0" + startMinutes;
+				}
 				// figure out am or pm and convert pm's down (Google uses 24 hour system instead of 12)
 				var start = (startHours % 12) + ":" + startMinutes;
 				var end = (endHours % 12) + ":" + endMinutes;
@@ -116,7 +125,7 @@ function renderDanceOfTheDay(data) {
 					end += " pm"; 
 				}
 
-				console.log("Event #" +  numEvents + " - start time: " + start + ", end time: " + end + ", title: " + this.summary + ", location: " + this.location + ", description: " + this.description);
+				// console.log("Event #" +  numEvents + " - start time: " + start + ", end time: " + end + ", title: " + this.summary + ", location: " + this.location + ", description: " + this.description);
 
 				eventItem.find('.event-summary').html(this.summary); // summary = title of event in google speak
 				eventItem.find('.event-time').append("When: " + start + "-" + end);
@@ -131,6 +140,17 @@ function renderDanceOfTheDay(data) {
 			}
 		}); // .each
 	}
+}
+
+
+// checks to see if a date is today
+function isToday(someDate) {
+	someDate = new Date(someDate);
+	var today = new Date();
+
+    return today.getFullYear() == someDate.getFullYear()
+        && today.getMonth() == someDate.getMonth()
+        && today.getDate() == someDate.getDate();
 }
 
 function scrolling() {
