@@ -93,14 +93,6 @@ header img {
 
 /* End Navigation*/
 
-/* General Slides */ 
-.parallax-background {
-	background-image: url('../images/bg03.jpg');
-	background-attachment: fixed;
-	padding: 20px;
-	color: white;
-}
-
 .parallax-background h1 {
 	color: white;
 }
@@ -145,7 +137,7 @@ header img {
 }
 
 #dance-of-the-day .section-content{
-	background-color: rgba(255,255,255,.7);	
+	background-color: #f3f3f3;	
 }
 
 .templates {
@@ -306,4 +298,13 @@ footer p{
 	text-decoration: none;
 	font-size: 120%;
 	text-align: center;
+}
+
+.social {
+	width: 50px;
+	padding: 20px;
+}
+
+.social:hover {
+	opacity: .7;
 }

@@ -95,7 +95,7 @@ function renderDanceOfTheDay(data) {
 		var numEvents = 0; // keep track of how many events were loaded
 		var eventItemTemplate = $('.event-item-template');
 		$.each(data.items, function(){
-			if(this.summary != undefined && isToday(this.start.dateTime)) { // no title
+			if(this.summary != undefined) { // no title
 				numEvents++;
 				var eventItem = eventItemTemplate.clone();
 				// craft time stamp
